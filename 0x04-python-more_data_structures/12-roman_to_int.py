@@ -1,23 +1,33 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) is not str or roman_string is None:
-        return 0
-
-    roman_letters = [
-        ['M', 1000], ['D', 500], ['C', 100], ['L', 50],
-        ['X', 10], ['V', 5], ['I', 1]
-    ]
-    num = 0
-    last = 0
-
-    for letter in roman_string:
-        for elem in roman_letters:
-            if letter == elem[0]:
-                if last == 0 or last >= elem[1]:
-                    num += elem[1]
-                elif last < elem[1]:
-                    num += elem[1] - (last * 2)
-
-                last = elem[1]
-
-    return num
+    value = 0
+    if not (isinstance(roman_string, str)):
+        return (0)
+    for i in range(len(roman_string)):
+        if (roman_string[i] == 'I'):
+            value += 1
+        if (roman_string[i] == 'V'):
+            if (roman_string[i - 1] == 'I' and i != 0):
+                value -= 2
+            value += 5
+        if (roman_string[i] == 'X'):
+            if (roman_string[i - 1] == 'I' and i != 0):
+                value -= 2
+            value += 10
+        if (roman_string[i] == 'L'):
+            if (roman_string[i - 1] == 'X' and i != 0):
+                value -= 20
+            value += 50
+        if (roman_string[i] == 'C'):
+            if (roman_string[i - 1] == 'X' and i != 0):
+                value -= 20
+            value += 100
+        if (roman_string[i] == 'D'):
+            if (roman_string[i - 1] == 'C' and i != 0):
+                value -= 200
+            value += 500
+        if (roman_string[i] == 'M'):
+            if (roman_string[i - 1] == 'C' and i != 0):
+                value -= 200
+            value += 1000
+    return (value)
