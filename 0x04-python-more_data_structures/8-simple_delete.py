@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 8-simple_delete.py
-# Mozamane Baloyi
+
 
 
 def simple_delete(a_dictionary, key=""):

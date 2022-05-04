@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 2-uniq_add.py
-# Mozamane Baloyi
+
 
 
 def uniq_add(my_list=[]):

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 6-print_sorted_dictionary.py
-# Mozamane Baloyi
+
 
 
 def print_sorted_dictionary(a_dictionary):

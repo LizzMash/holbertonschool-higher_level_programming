@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 7-update_dictionary.py
-# Mozamane Baloyi
+
 
 
 def update_dictionary(a_dictionary, key, value):

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 100-weight_average.py
-# Mozamane Baloyi
+
 
 
 def weight_average(my_list=[]):
