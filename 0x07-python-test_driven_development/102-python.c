@@ -1,6 +1,6 @@
 /*
  * File: 102-python.c
- * Auth: Elizabeth Mashilo
+ * Auth: Elizabeth MAShilo
  */
 
 #include "Python.h"
