@@ -1,20 +1,19 @@
 #!/usr/bin/python3
-"""MyInt inherits from int
+"""
+Contains the class MyInt
 """
 
 
 class MyInt(int):
-    """Inherits from int
-    """
+    """rebel version of an integer, perfect for opposite day!"""
+    def __new__(cls, *args, **kwargs):
+        """create a new instance of the class"""
+        return super(MyInt, cls).__new__(cls, *args, **kwargs)
 
-    def __eq__(self, value):
-        """Magic method equals
-        """
+    def __eq__(self, other):
+        """what was != is now =="""
+        return int(self) != other
 
-        return super().__ne__(value)
-
-    def __ne__(self, value):
-        """Magic method not equals
-        """
-
-        return super().__eq__(value)
+    def __ne__(self, other):
+        """what was == is now !="""
+        return int(self) == other
